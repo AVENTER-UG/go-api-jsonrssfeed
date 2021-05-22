@@ -43,7 +43,7 @@ func Commands() *mux.Router {
 	rtr.HandleFunc("/versions", APIVersions).Methods("GET")
 	rtr.HandleFunc("/api", APIVersions).Methods("GET")
 	rtr.HandleFunc("/health", apiHealth).Methods("GET")
-	rtr.HandleFunc("/api/feed/v0", APIV0GetFeed).Methods("GET")
+	rtr.HandleFunc("/api/feed/v0", APIV0GetFeed).Methods("POST")
 
 	return rtr
 }
