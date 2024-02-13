@@ -5,7 +5,8 @@ import (
 	_ "net/http/pprof"
 
 	"go-api-jsonrssfeed/api"
-	util "git.aventer.biz/AVENTER/util"
+
+	util "github.com/AVENTER-UG/util/util"
 	"github.com/sirupsen/logrus"
 )
 
@@ -22,5 +23,5 @@ func main() {
 
 	if err := http.ListenAndServe(config.APIBind+":"+config.APIPort, nil); err != nil {
 		logrus.Fatalln("ListenAndServe: ", err)
-	}	
+	}
 }

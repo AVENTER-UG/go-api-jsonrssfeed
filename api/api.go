@@ -10,7 +10,7 @@ import (
 
 	cfg "go-api-jsonrssfeed/types"
 
-	util "git.aventer.biz/AVENTER/util"
+	util "github.com/AVENTER-UG/util/util"
 )
 
 var config cfg.Config
@@ -35,7 +35,6 @@ func SetConfig(conf cfg.Config) {
 
 	util.SetLogging(config.LogLevel, config.EnableSyslog, config.AppName)
 }
-
 
 // Commands is the main function of this package
 func Commands() *mux.Router {
